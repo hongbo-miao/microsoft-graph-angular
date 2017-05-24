@@ -7,7 +7,7 @@ import { LoginModule } from './+login/modules/';
 import { HomeModule } from './+home/modules/';
 import { AppRoutingModule } from './app-routing.module';
 
-import { UserService } from './+home/services/';
+import { HomeService } from './+home/services/';
 import { AuthService } from './auth/services/';
 
 import { AuthGuard } from './shared/guards/';
@@ -30,7 +30,7 @@ import { AppComponent } from './app.component';
   providers: [
     AuthGuard,
     AuthService,
-    UserService,
+    HomeService,
 
     BaseRequestOptions
   ],

@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AuthService } from '../../auth/services/';
-import { AuthHttpService } from '../services/';
+import { HttpService } from '../services/';
 
 const MODULES = [
   CommonModule,
@@ -27,7 +27,7 @@ const COMPONENTS = [];
   ],
   providers: [
     AuthService,
-    AuthHttpService
+    HttpService
   ],
   exports: [
     MODULES,

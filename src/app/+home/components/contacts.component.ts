@@ -6,9 +6,16 @@ import { User } from '../models/';
   selector: 'app-contacts',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <ul>
-      <li *ngFor="let user of users">{{user.displayName}}</li>
-    </ul>
+    <table>
+      <tr>
+        <th align="left">Name</th>
+        <th align="left">Email</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>{{user.displayName}}</td>
+        <td>{{user.emailAddresses[0].address}}</td>
+      </tr>
+    </table>
   `
 })
 export class ContactsComponent {

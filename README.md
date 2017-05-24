@@ -14,14 +14,15 @@ Second, it reads the contacts of your Microsoft account.
 Home page
 ![image](https://cloud.githubusercontent.com/assets/3375461/25735473/78ace6dc-3120-11e7-9eeb-9c767877fc25.png)
 
+Third, it writes the contacts to an Excel file.
+
+Note you need create an file called "demo.xlsx" in root folder of your OneDrive.
+Then create an table called "Table 1" which has two columns in the Excel.
 
 ## Development server
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 Use `ng serve` or `npm start` to run. Navigate to `http://localhost:4200/`.
-
-## To do
-Add demo to write to an Excel file.
 
 ## Learn More
 

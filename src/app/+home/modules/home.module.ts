@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import {
   ContactsComponent,
+  ExcelComponent,
   LogoutComponent,
 
   HomeComponent
@@ -17,6 +18,7 @@ import { HomeRoutingModule } from './';
   ],
   declarations: [
     ContactsComponent,
+    ExcelComponent,
     LogoutComponent,
 
     HomeComponent
