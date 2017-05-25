@@ -10,7 +10,7 @@ import { User } from '../models/';
 
 @Injectable()
 export class HomeService {
-  url = 'https://graph.microsoft.com/beta';
+  url = 'https://graph.microsoft.com/v1.0';
   file = 'demo.xlsx';
   table = 'Table1';
 

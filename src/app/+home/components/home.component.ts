@@ -12,15 +12,15 @@ import { AuthService } from '../../auth/services/';
     <app-logout
       (logout)="onLogout()">
     </app-logout>
+    
+    <app-contacts
+      [users]="users$ | async">
+    </app-contacts>
 
     <app-excel
       [users]="users$ | async"
       (addContactToExcel)="onAddContactToExcel($event)">
     </app-excel>
-    
-    <app-contacts
-      [users]="users$ | async">
-    </app-contacts>
   `
 })
 export class HomeComponent implements OnInit, OnDestroy {

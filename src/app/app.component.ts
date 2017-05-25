@@ -5,7 +5,7 @@ import { AuthService } from './auth/services/';
 @Component({
   selector: 'app-root',
   template: `
-    <h2>Hello Microsoft Graph!</h2>
+    <h3>Hello Microsoft Graph!</h3>
     
     <router-outlet></router-outlet>
   `
