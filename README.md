@@ -26,7 +26,15 @@ If you click "Write to Excel" button, it writes the contacts to an Excel file.
 ## How to run
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
-Use `npm start` or `ng serve` to run. Navigate to `http://localhost:4200/`.
+Use `npm start` or `ng serve` to run. Navigate to [http://localhost:4200/](http://localhost:4200/).
+
+## How to create a project by yourself
+To create your app, you need get an App ID at [https://apps.dev.microsoft.com/](https://apps.dev.microsoft.com/).
+
+And configure the app with the permissions you need.
+
+This demo needs `Contacts.Read`, `Files.ReadWrite`. These info are set up in the [config file](https://github.com/Hongbo-Miao/microsoft-graph-angular/blob/master/src/app/shared/configs/configs.ts).
+
 
 ## Learn More
 
