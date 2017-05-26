@@ -37,7 +37,7 @@ export class AuthService {
 
   login() {
     hello('msft').login({
-        scope: 'contacts.read,files.readwrite'
+        scope: Configs.scope
       });
   }
 
