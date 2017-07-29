@@ -12,41 +12,32 @@ export class AuthService {
 
   initAuth() {
     hello.init({
-      msft: {
-        oauth: {
-          version: 2,
-          auth: 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize'
+        msft: {
+          id: Configs.appId,
+          oauth: {
+            version: 2,
+            auth: 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize'
+          },
+          scope_delim: ' ',
+          form: false
         },
-        scope_delim: ' ',
-        form: false
-      }
-    });
-
-    hello.init({
-      msft: Configs.appId
-    }, {
-      redirect_uri: window.location.href
-    });
+      },
+      { redirect_uri: window.location.href }
+    );
 
     hello.on('auth.login', auth => {
-      if (auth.network === 'msft') {
-        this.router.navigate(['/home']);
-      }
+      if (auth.network === 'msft') this.router.navigate(['/home']);
     });
   }
 
   login() {
-    hello('msft').login({
-        scope: Configs.scope
-      });
+    hello('msft').login({ scope: Configs.scope });
   }
 
   logout() {
-    hello('msft').logout()
-      .then(() => {
-        this.router.navigate(['/login']);
-      }, e => {
-        console.error(e.error.message);
-      });
+    hello('msft').logout().then(
+      () => this.router.navigate(['/login']),
+      e => console.error(e.error.message)
+    );
   }
 }
