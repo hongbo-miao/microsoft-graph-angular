@@ -2,21 +2,20 @@
 
 This project is showing how you can use [Microsoft Graph](https://developer.microsoft.com/en-us/graph/) in your Angular 4 project.
 
-Microsoft Graph gives you power to control Excel, Outlook, OneDrive, OneNote, Planner, Azure AD, SharePoint, etc.
+Microsoft Graph gives you power to interact with Excel, Outlook, OneDrive, OneNote, Planner, Azure AD, SharePoint, etc.
 
 ## What this project does
 It shows how you can Mircosoft Graph to login with a Microsoft account.
 
-![image](https://cloud.githubusercontent.com/assets/3375461/26473438/333821ca-4160-11e7-85b4-76a91fe074d2.png)
+![image](https://user-images.githubusercontent.com/3375461/28985978-e5d3ea26-7919-11e7-8a69-a52bccd3f46b.png)
 
 Once you login, it reads the contacts of your Microsoft account.
 
-![image](https://cloud.githubusercontent.com/assets/3375461/26473472/703f0b92-4160-11e7-99a5-83d8610a9e0b.png)
+![image](https://user-images.githubusercontent.com/3375461/28985932-b4ef87a8-7919-11e7-8a67-31ba8d83fa24.png)
 
 If you click "Write to Excel" button, it writes the contacts to an Excel file.
 
 ![image](https://cloud.githubusercontent.com/assets/3375461/26473949/19163702-4163-11e7-9a41-fe7482422a23.png)
-
 
 > Note before write to Excel, you need create an file called "demo.xlsx" in root folder of your OneDrive.
 > Then create an table called "Table 1" which has two columns in the Excel like below:

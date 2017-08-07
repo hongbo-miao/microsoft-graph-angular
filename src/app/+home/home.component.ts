@@ -9,8 +9,6 @@ import { AuthService } from '../auth/auth.service';
 @Component({
   selector: 'app-home',
   template: `
-    <button (click)="onLogout()">Logout</button>
-
     <table>
       <tr>
         <th align="left">Name</th>
@@ -21,8 +19,8 @@ import { AuthService } from '../auth/auth.service';
         <td>{{user.emailAddresses[0].address}}</td>
       </tr>
     </table>
-
     <button (click)="onAddContactToExcel()">Write to Excel</button>
+    <button (click)="onLogout()">Logout</button>
   `
 })
 export class HomeComponent implements OnInit, OnDestroy {
