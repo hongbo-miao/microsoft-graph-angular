@@ -34,7 +34,7 @@ To create your app, you need get an App ID at [https://apps.dev.microsoft.com/](
 
 And configure the app with the permissions you need.
 
-This demo needs `Contacts.Read`, `Files.ReadWrite`. These info are set up in the [config file](https://github.com/Hongbo-Miao/microsoft-graph-angular/blob/master/src/app/shared/configs/configs.ts).
+This demo needs `Contacts.Read`, `Files.ReadWrite`. These info are set up in the [config file](https://github.com/Hongbo-Miao/microsoft-graph-angular/blob/master/src/app/shared/configs.ts).
 
 
 ## Learn More
