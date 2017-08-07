@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
   template: `
-    Hello Microsoft Graph!
+    <router-outlet></router-outlet>
   `
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private authService: AuthService) {}
+
+  ngOnInit() {
+    this.authService.initAuth();
+  }
 }
