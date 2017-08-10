@@ -40,7 +40,7 @@ export class AuthService {
 
   logout() {
     hello('msft').logout().then(
-      () => this.router.navigate(['/login']),
+      () => this.router.navigate(['/']),
       e => console.error(e.error.message)
     );
   }

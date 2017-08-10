@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { extractData, handleError } from '../shared/http-helper';
 import { HttpService } from '../shared/http.service';
-import { User } from '../+home/user.model';
+import { User } from './user.model';
 
 @Injectable()
 export class HomeService {

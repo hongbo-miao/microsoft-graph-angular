@@ -4,17 +4,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './+home/home.component';
-import { LoginComponent } from './+login/login.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 import { HttpService } from './shared/http.service';
 import { AuthService } from './auth/auth.service';
-import { HomeService } from './+home/home.service';
+import { HomeService } from './home/home.service';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }
+  { path: '', component: LoginComponent },
+  { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({

@@ -32,10 +32,11 @@ Use `npm start` or `ng serve` to run. Navigate to [http://localhost:4200/](http:
 ## How to create a project by yourself
 To create your app, you need get an App ID at [https://apps.dev.microsoft.com/](https://apps.dev.microsoft.com/).
 
-And configure the app with the permissions you need.
+Configure the app with the permissions you need. Check **Allow Implicit Flow**. Update **Redirect URLs**.
 
-This demo needs `Contacts.Read`, `Files.ReadWrite`. These info are set up in the [config file](https://github.com/Hongbo-Miao/microsoft-graph-angular/blob/master/src/app/shared/configs.ts).
+This demo needs `Contacts.Read`, `Files.ReadWrite` permissions. The Redirect URLs is `http://localhost:4200/home`.
 
+These info are set up in the [config file](https://github.com/Hongbo-Miao/microsoft-graph-angular/blob/master/src/app/shared/configs.ts).
 
 ## Learn More
 
