@@ -34,7 +34,7 @@ To create your app, you need get an App ID at [https://apps.dev.microsoft.com/](
 
 Configure the app with the permissions you need. Check **Allow Implicit Flow**. Update **Redirect URLs**.
 
-This demo needs `Contacts.Read`, `Files.ReadWrite` permissions. The Redirect URLs is `http://localhost:4200/home`.
+This demo needs `Contacts.Read`, `Files.ReadWrite` permissions. The Redirect URLs are `http://localhost:4200`, `http://localhost:4200/home`.
 
 These info are set up in the [config file](https://github.com/Hongbo-Miao/microsoft-graph-angular/blob/master/src/app/shared/configs.ts).
 
