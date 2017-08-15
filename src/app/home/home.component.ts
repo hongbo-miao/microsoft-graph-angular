@@ -1,5 +1,4 @@
 ﻿import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 
 import { User } from './user.model';
@@ -14,7 +13,7 @@ import { AuthService } from '../auth/auth.service';
         <th align="left">Name</th>
         <th align="left">Email</th>
       </tr>
-      <tr *ngFor="let user of (users$ | async)">
+      <tr *ngFor="let user of users">
         <td>{{user.displayName}}</td>
         <td>{{user.emailAddresses[0].address}}</td>
       </tr>
@@ -24,8 +23,9 @@ import { AuthService } from '../auth/auth.service';
   `
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  users$: Observable<User[]>;
-  subscription: Subscription;
+  users: User[];
+  subsGetUsers: Subscription;
+  subsAddContactToExcel: Subscription;
 
   constructor(
     private homeService: HomeService,
@@ -33,17 +33,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.users$ = this.homeService.getUsers();
+    this.subsGetUsers = this.homeService.getUsers().subscribe(users => this.users = users);
   }
 
   ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
+    this.subsGetUsers.unsubscribe();
+    this.subsAddContactToExcel.unsubscribe();
   }
 
-  onAddContactToExcel(users: User[]) {
-    this.subscription = this.homeService.addContactToExcel(users).subscribe();
+  onAddContactToExcel() {
+    this.subsAddContactToExcel = this.homeService.addContactToExcel(this.users).subscribe();
   }
 
   onLogout() {
